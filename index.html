@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Web</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        padding: 40px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    form {
+        max-width: 600px;
+        margin: auto;
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    select[multiple] {
+        height: 120px;
+    }
+
+    input[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+</head>
+<body>
+    <h1>Formulario Web</h1>
+    <form action="https://formsubmit.co/jonathan.marin@rappi.com" method="POST">
+>
+        <!-- 1. BPO -->
+        <label for="bpo">BPO:</label>
+        <select name="bpo" id="bpo" required>
+            <option value="BRM">BRM</option>
+            <option value="CONCENTRIX">CONCENTRIX</option>
+        </select><br><br>
+
+        <!-- 2. Vertical -->
+        <label for="vertical">Vertical:</label>
+        <select name="vertical" id="vertical" required>
+            <option value="User">User</option>
+            <option value="Merchants">Merchants</option>
+            <option value="Rappitenderos">Rappitenderos</option>
+        </select><br><br>
+
+        <!-- 3. Servicio impactado -->
+        <label for="servicio">Servicio impactado:</label>
+        <select name="servicio" id="servicio" required>
+            <option value="Food_Live">Food_Live</option>
+            <option value="Food_Non Live">Food_Non Live</option>
+            <option value="Non Food_Live">Non Food_Live</option>
+            <option value="Non Food_Non Live">Non Food_Non Live</option>
+            <option value="Chat Support">Chat Support</option>
+            <option value="Fraud Support">Fraud Support</option>
+            <option value="Regulatory Entity">Regulatory Entity</option>
+            <option value="Bad Csat">Bad Csat</option>
+            <option value="Social Media">Social Media</option>
+            <option value="Mail Support">Mail Support</option>
+            <option value="Rappi For Business">Rappi For Business</option>
+            <option value="Rappisupport">Rappisupport</option>
+            <option value="Customer Live Orders">Customer Live Orders</option>
+            <option value="Afc Support">Afc Support</option>
+            <option value="Live">Live</option>
+            <option value="Onboarding">Onboarding</option>
+            <option value="Backoffice">Backoffice</option>
+            <option value="Cpg Shoppers">Cpg Shoppers</option>
+            <option value="RT New Activation">RT New Activation</option>
+            <option value="Chile_s Line">Chile_s Line</option>
+            <option value="Ces Support">Ces Support</option>
+            <option value="Rt Non Live">Rt Non Live</option>
+            <option value="Payments">Payments</option>
+        </select><br><br>
+
+        <!-- 4. Metric - Exoneration -->
+        <label for="metric">Metric - Exoneration:</label><br>
+        <select name="metric[]" id="metric" multiple size="7">
+            <option value="DSAT">DSAT</option>
+            <option value="AHT">AHT</option>
+            <option value="Service Level">Service Level</option>
+            <option value="ADH">ADH</option>
+            <option value="PUB">PUB</option>
+            <option value="SOBRECOMPENSACIÓN">SOBRECOMPENSACIÓN</option>
+            <option value="WORK AVOIDANCE">WORK AVOIDANCE</option>
+        </select><br><br>
+
+        <!-- 5. Tool -->
+        <label for="tool">Tool:</label>
+        <select name="tool" id="tool" required>
+            <option value="General">General</option>
+            <option value="Kustomer">Kustomer</option>
+            <option value="Lupe">Lupe</option>
+        </select><br><br>
+
+        <!-- 6-9. Fechas y Horas -->
+        <label for="fecha_inicio">Fecha inicial del issue/incident:</label>
+        <input type="date" id="fecha_inicio" name="fecha_inicio"><br><br>
+
+        <label for="fecha_fin">Fecha final del issue/incident:</label>
+        <input type="date" id="fecha_fin" name="fecha_fin"><br><br>
+
+        <label for="hora_inicio">Hora inicio del issue/incident:</label>
+        <input type="time" id="hora_inicio" name="hora_inicio"><br><br>
+
+        <label for="hora_fin">Hora fin del issue/incident:</label>
+        <input type="time" id="hora_fin" name="hora_fin"><br><br>
+
+        <!-- 10. Ticket -->
+        <label for="ticket">Ticket proporcionado por Rappi:</label>
+        <input type="text" id="ticket" name="ticket"><br><br>
+
+        <!-- 11. Tipo solicitud -->
+        <label for="tipo_solicitud">Tipo solicitud:</label>
+        <select name="tipo_solicitud" id="tipo_solicitud" required>
+            <option value="Nueva">Nueva</option>
+            <option value="Antigua">Antigua</option>
+        </select><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
